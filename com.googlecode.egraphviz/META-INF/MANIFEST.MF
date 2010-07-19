@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Eclipse Graphviz Plug-in
+Bundle-SymbolicName: com.googlecode.egraphviz;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.googlecode.egraphviz.Activator
+Bundle-Vendor: Lirmm.fr
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.ide;bundle-version="3.4.1",
+ org.eclipse.core.resources;bundle-version="3.4.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: com.googlecode.egraphviz

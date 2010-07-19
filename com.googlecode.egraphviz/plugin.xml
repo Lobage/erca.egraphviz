@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <category
+            id="com.googlecode.egraphviz.graphics"
+            name="Graphics">
+      </category>
+      <wizard
+            category="com.googlecode.egraphviz.graphics"
+            class="com.googlecode.egraphviz.ExportDotWizard"
+            id="com.googlecode.egraphviz.exportdotwizard"
+            name="Graphviz Dot Graph">
+         <description>
+            This wizard helps you to export a Graphviz dot file to a graphic file.
+         </description>
+         <selection
+               class="org.eclipse.core.resources.IResource">
+         </selection>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="com.googlecode.egraphviz.quickexportobject"
+            nameFilter="*.dot"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               id="com.googlecode.egraphviz.quickexportmenu"
+               label="Dot Quick Export"
+               path="additions">
+            <separator
+                  name="actions">
+            </separator>
+         </menu>
+         <action
+               class="com.googlecode.egraphviz.SVGExportAction"
+               id="com.googlecode.egraphviz.svgexportaction"
+               label="SVG Export"
+               menubarPath="com.googlecode.egraphviz.quickexportmenu/actions">
+         </action>
+         <action
+               class="com.googlecode.egraphviz.JPGExportAction"
+               id="com.googlecode.egraphviz.jpgexportaction"
+               label="JPG Export"
+               menubarPath="com.googlecode.egraphviz.quickexportmenu/actions">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
